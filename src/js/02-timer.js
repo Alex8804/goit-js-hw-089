@@ -2,6 +2,10 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
+Notiflix.Notify.init({
+  position: 'center-top',
+});
+
 const startBtn = document.querySelector('button[data-start]');
 const currentDate = new Date();
 
