@@ -19,14 +19,12 @@ function onBtnCreatePrClick(evt) {
     createPromise(i, selectedDelay);
     selectedDelay += selectedStep;
   }
-
-  // form.reset();
 }
 
 function createPromise(position, delay) {
   const promise = new Promise((resolve, rejekt) => {
+    const shouldResolve = Math.random() > 0.3;
     const timerId = setTimeout(() => {
-      const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
         resolve({ position, delay });
       } else {
