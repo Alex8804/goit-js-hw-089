@@ -15,7 +15,7 @@ function onBtnCreatePrClick(evt) {
   const selectedStep = Number(step.value);
   const selectedAmount = Number(amount.value);
 
-  for (let i = 0; i <= selectedAmount; i += 1) {
+  for (let i = 1; i <= selectedAmount; i += 1) {
     createPromise(i, selectedDelay);
     selectedDelay += selectedStep;
   }
